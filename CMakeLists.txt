@@ -5,6 +5,9 @@ project(fast_io)
 INSTALL (DIRECTORY ${CMAKE_SOURCE_DIR}/include/ DESTINATION include)
 INSTALL (DIRECTORY ${CMAKE_SOURCE_DIR}/man/ DESTINATION man/man3)
 
+add_library(FAST_IO INTERFACE)
+target_include_directories(FAST_IO INTERFACE include)
+
 option(BUILD_I18N_DLLS "build i18n runtime dlls" OFF)
 
 if(BUILD_I18N_DLLS)
